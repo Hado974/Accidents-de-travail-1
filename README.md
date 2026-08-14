@@ -26,7 +26,7 @@ Pour lancer l'application Streamlit en local :
 
 1. Cloner le dépôt :
 ```bash
-git clone [https://github.com/VOTRE_USERNAME/Projet_vinci_adt.git](https://github.com/VOTRE_USERNAME/Projet_vinci_adt.git)
+git clone [https://github.com/Hado974/Projet_vinci_adt.git](https://github.com/Hado974/Projet_vinci_adt.git)
 cd Projet_vinci_adt
 
 
