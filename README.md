@@ -18,6 +18,7 @@ Développer un Système d'Aide à la Décision (SAD) proactif. Le modèle évalu
 2. **Pivot Architectural :** Suppression totale des variables post-accident pour garantir une stricte capacité prédictive *a priori*.
 3. **Modélisation Tabulaire :** Entraînement d'un modèle de Gradient Boosting avec compensation du déséquilibre extrême des classes.
 4. **Optimisation :** Recherche des hyperparamètres via Optuna, maximisant spécifiquement le Recall de la classe critique pour minimiser les faux négatifs.
+5. **Rapport technique :** [Lire le rapport détaillé](Rapport.md)
 
 ## 🚀 Utilisation du Démonstrateur (MVP)
 
@@ -38,5 +39,3 @@ pip install -r requirements.txt
 Lancer l'interface :
 
 streamlit run app.py
-
-Veuillez consulter le rapport technique complet ici : [Lire le rapport détaillé](Rapport.md)
