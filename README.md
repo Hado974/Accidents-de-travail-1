@@ -27,3 +27,16 @@ Pour lancer l'application Streamlit en local :
 ```bash
 git clone [https://github.com/VOTRE_USERNAME/Projet_vinci_adt.git](https://github.com/VOTRE_USERNAME/Projet_vinci_adt.git)
 cd Projet_vinci_adt
+
+
+Créer l'environnement virtuel et installer les dépendances :
+
+python3 -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+
+Lancer l'interface :
+
+streamlit run app.py
+
+Veuillez consulter le rapport technique complet ici : [Lire le rapport détaillé](Rapport.md)
