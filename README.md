@@ -1,4 +1,4 @@
-# 🚧 Vinci ADT : Système de Prévention des Accidents du BTP
+# 🚧 Système de Prévention des Accidents du BTP
 
 Ce dépôt contient le code source d'un démonstrateur de Machine Learning développé pour anticiper les risques d'accidents graves sur les chantiers de construction. 
 
