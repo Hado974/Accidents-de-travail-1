@@ -1,17 +1,29 @@
-# Accidents-de-travail-1
-Cadrage Stratégique du Projet (Orientation Métier)
+# 🚧 Vinci ADT : Système de Prévention des Accidents du BTP
 
-**1. Contexte et Enjeux**
-*   **Le secteur :** Le BTP est un environnement à haut risque. Les accidents ont un coût humain inacceptable et un impact financier majeur (arrêts de chantier, pénalités, réputation).
-*   **Le client cible (Vinci Construction) :** Cherche à optimiser ses processus de sécurité au-delà de la conformité réglementaire, en adoptant une approche proactive.
+Ce dépôt contient le code source d'un démonstrateur de Machine Learning développé pour anticiper les risques d'accidents graves sur les chantiers de construction. 
 
-**2. Problématique Métier**
-*   Comment identifier de manière proactive les situations de chantier présentant un risque élevé d'accident grave, afin de cibler les interventions de prévention ?
+## 🎯 Objectif Métier
+Développer un Système d'Aide à la Décision (SAD) proactif. Le modèle évalue la probabilité d'un accident critique/mortel en se basant sur les conditions initiales du chantier (météo, âge de l'intervenant, métier), permettant ainsi de prioriser les ressources de prévention.
 
-**3. Proposition de Valeur de l'Outil (Positionnement)**
-*   **Ce que l'outil est :** Un système d'aide à la décision (SAD). Il évalue une probabilité de gravité d'accident basée sur des facteurs combinés (météo, type de tâche, équipement).
-*   **Ce que l'outil n'est pas :** Un remplaçant du responsable sécurité. Il ne prend pas de décision autonome d'arrêt de chantier.
-*   **Bénéfice opérationnel :** Allocation optimale des ressources de sécurité (ex: envoyer le superviseur sur la zone A plutôt que B aujourd'hui).
+## 🛠️ Stack Technique
+* **Langage & Traitement :** Python, Pandas, NumPy
+* **Machine Learning :** Scikit-Learn, LightGBM
+* **Optimisation :** Optuna (Optimisation bayésienne)
+* **Interprétabilité :** SHAP
+* **Déploiement :** Streamlit
+* **Infrastructure :** Environnement Linux (Ubuntu) avec accélération GPU locale (RTX 5080) lors des phases de tests NLP.
 
-**4. Périmètre et Limites (Transparence)**
-*   **Données :** Utilisation de données de l'OSHA (États-Unis). Les normes de sécurité (EPI, législation) diffèrent des normes européennes/françaises. Le modèle démontre la faisabilité technique, mais nécessitera un réentraînement sur les données internes de Vinci pour une mise en production réelle.
+## 🧠 Démarche d'ingénierie
+1. **Diagnostic du Data Leakage :** Une première itération incluant des modèles de Deep Learning (Sentence-Transformers) sur les descriptions textuelles a mis en évidence une fuite de données sémantique (94% de Recall biaisé).
+2. **Pivot Architectural :** Suppression totale des variables post-accident pour garantir une stricte capacité prédictive *a priori*.
+3. **Modélisation Tabulaire :** Entraînement d'un modèle de Gradient Boosting avec compensation du déséquilibre extrême des classes.
+4. **Optimisation :** Recherche des hyperparamètres via Optuna, maximisant spécifiquement le Recall de la classe critique pour minimiser les faux négatifs.
+
+## 🚀 Utilisation du Démonstrateur (MVP)
+
+Pour lancer l'application Streamlit en local :
+
+1. Cloner le dépôt :
+```bash
+git clone [https://github.com/VOTRE_USERNAME/Projet_vinci_adt.git](https://github.com/VOTRE_USERNAME/Projet_vinci_adt.git)
+cd Projet_vinci_adt
