@@ -1,5 +1,16 @@
+# Environnements et IDE
 .venv/
+.agents/
+.vscode/
 __pycache__/
-*.xlsx
-*.csv
-.ipynb_checkpoints/
+*.pyc
+
+# Données brutes et intermédiaires lourdes
+Data/raw/*
+Data/processed/*.npz
+
+# On autorise exceptionnellement le versionnage des petits modèles finaux pour Streamlit
+!Data/processed/lgb_model_option_b.joblib
+!Data/processed/preprocessor_option_b.joblib
+!Data/processed/*.png
+!Data/processed/*.csv
